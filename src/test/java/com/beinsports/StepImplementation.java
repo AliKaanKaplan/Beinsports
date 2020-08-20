@@ -20,9 +20,9 @@ public class StepImplementation {
         subscribePage.clickSubscribeForOneMothButton();
     }
 
-    @Step("Fill Create Account form with <email>")
-    public void createAccount(String email) {
-        registerPage.fillTheAccountInfo("John", "Doe", email, "doejohn12345");
+    @Step("Fill Create Account form with email")
+    public void createAccount() {
+        registerPage.fillTheAccountInfo("John", "Doe","doejohn12345");
         registerPage.swipePage();
         registerPage.clickCreateAccountButton();
     }

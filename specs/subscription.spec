@@ -4,7 +4,7 @@
 
 * Click the subscribe button
 * Register to One Month package
-* Fill Create Account form with "johndoas@randomsmail.com"
+* Fill Create Account form with email
 * Validate package price
 * Make Payment with Credit Card
 * Expect for a total charge of 1.00 since this is a free trial package

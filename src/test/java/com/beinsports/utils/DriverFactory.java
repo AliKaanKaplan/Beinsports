@@ -16,6 +16,7 @@ public class DriverFactory {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("disable-popup-blocking");
+            options.addArguments("--disable-notifications");
             driver = new ChromeDriver(options);
         }
         return driver;

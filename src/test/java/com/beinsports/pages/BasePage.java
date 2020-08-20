@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Random;
+
 public class BasePage {
 
     private final WebDriver driver = DriverFactory.getChromeDriver();
@@ -18,6 +20,7 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         driver.findElement(locator).click();
     }
+
 
     public String getText(By locator){
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
