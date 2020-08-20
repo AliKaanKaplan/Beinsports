@@ -38,7 +38,7 @@ public class StepImplementation {
         cardPage.validateChargeCount();
     }
 
-    @Step("Provide a test card data and confirm payment(Do not enter a real card data)")
+    @Step("Provide a test card data and confirm payment")
     public void fiilCreditCardInfo() {
 
         cardPage.fiilTheCreditCardPage();
