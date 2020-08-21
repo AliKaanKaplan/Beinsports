@@ -7,14 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Random;
-
 public class BasePage {
 
     private final WebDriver driver = DriverFactory.getChromeDriver();
     private final WebDriverWait wait = DriverFactory.getWebDriverWait();
 
-    public void click(By locator){
+    public void click(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -22,20 +20,20 @@ public class BasePage {
     }
 
 
-    public String getText(By locator){
+    public String getText(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return driver.findElement(locator).getText();
     }
 
-    public void clearAndType(By locator, String item){
+    public void clearAndType(By locator, String item) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(item);
     }
 
-    public void swipeToDown(){
+    public void swipeToDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,250)");
     }

@@ -5,7 +5,7 @@ import com.thoughtworks.gauge.Step;
 
 public class StepImplementation {
 
-    CardPage cardPage=new CardPage();
+    CardPage cardPage = new CardPage();
     HomePage homePage = new HomePage();
     PaymentPage paymentPage = new PaymentPage();
     RegisterPage registerPage = new RegisterPage();
@@ -13,7 +13,9 @@ public class StepImplementation {
 
 
     @Step("Click the subscribe button")
-    public void clickTheSubscribeButton() { homePage.clickSubscribeButton(); }
+    public void clickTheSubscribeButton() {
+        homePage.clickSubscribeButton();
+    }
 
     @Step("Register to One Month package")
     public void registerTheOneMonthPackage() {
@@ -22,16 +24,20 @@ public class StepImplementation {
 
     @Step("Fill Create Account form with email")
     public void createAccount() {
-        registerPage.fillTheAccountInfo("John", "Doe","doejohn12345");
+        registerPage.fillTheAccountInfo("John", "Doe", "doejohn12345");
         registerPage.swipePage();
         registerPage.clickCreateAccountButton();
     }
 
     @Step("Validate package price")
-    public void validatePackagePrice() { subscribePage.validatePricess(); }
+    public void validatePackagePrice() {
+        subscribePage.validatePricess();
+    }
 
     @Step("Make Payment with Credit Card")
-    public void clickThePaymentButton() throws InterruptedException { paymentPage.clickPaymentButton(); }
+    public void clickThePaymentButton() throws InterruptedException {
+        paymentPage.clickPaymentButton();
+    }
 
     @Step("Expect for a total charge of 1.00 since this is a free trial package")
     public void validateToCharge() {

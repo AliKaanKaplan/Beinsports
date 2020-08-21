@@ -14,25 +14,25 @@ public class RegisterPage {
     private static By passwordTextLocator = By.name("Password");
     private static By createAccountLocator = By.xpath("//input[@class='border-none bc-subscribe']");
 
-    public void fillTheAccountInfo(String firstName, String lastName, String password){
-        String emailAddress=randomMail()+"@gmail.com";
-        page.clearAndType(firstNameTextLocator,firstName);
-        page.clearAndType(lastNameTextLocator,lastName);
-        page.clearAndType(emailTextLocator,emailAddress);
-        page.clearAndType(passwordTextLocator,password);
+    public void fillTheAccountInfo(String firstName, String lastName, String password) {
+        String emailAddress = randomMail() + "@gmail.com";
+        page.clearAndType(firstNameTextLocator, firstName);
+        page.clearAndType(lastNameTextLocator, lastName);
+        page.clearAndType(emailTextLocator, emailAddress);
+        page.clearAndType(passwordTextLocator, password);
     }
 
-    public void swipePage(){
+    public void swipePage() {
         page.swipeToDown();
     }
 
-    public void clickCreateAccountButton(){
+    public void clickCreateAccountButton() {
 
         page.click(createAccountLocator);
 
     }
 
-    protected String randomMail(){
+    protected String randomMail() {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();
         Random rnd = new Random();

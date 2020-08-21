@@ -13,7 +13,7 @@ public class BaseTest {
 
     @BeforeScenario
     public void setUp() {
-        String baseURL="https://connect-au.beinsports.com/en";
+        String baseURL = "https://connect-au.beinsports.com/en";
         driver.manage().deleteAllCookies();
         driver.navigate().to(baseURL);
         driver.manage().window().maximize();

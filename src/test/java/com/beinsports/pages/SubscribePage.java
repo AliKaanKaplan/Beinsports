@@ -15,7 +15,7 @@ public class SubscribePage {
     }
 
     public void validatePricess() {
-        Assert.assertTrue("Sayfadaki tutar doğru değil.",compareToText(priceLocator,"19.99"));
+        Assert.assertTrue("Sayfadaki tutar doğru değil.", compareToText(priceLocator, "19.99"));
     }
 
 

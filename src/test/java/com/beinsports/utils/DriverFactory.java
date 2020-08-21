@@ -11,8 +11,8 @@ public class DriverFactory {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    public static WebDriver getChromeDriver(){
-        if (driver == null){
+    public static WebDriver getChromeDriver() {
+        if (driver == null) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("disable-popup-blocking");
@@ -22,9 +22,9 @@ public class DriverFactory {
         return driver;
     }
 
-    public static WebDriverWait getWebDriverWait(){
-        if (wait == null){
-            wait = new WebDriverWait(getChromeDriver(),10);
+    public static WebDriverWait getWebDriverWait() {
+        if (wait == null) {
+            wait = new WebDriverWait(getChromeDriver(), 10);
         }
         return wait;
     }
